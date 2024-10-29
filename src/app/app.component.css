@@ -1,0 +1,57 @@
+/* Estilo general del contenedor del chat */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Ocupa el 100% de la altura de la ventana */
+    background-color: black; /* Fondo negro */
+    color: lime; /* Color del texto */
+    font-family: 'Courier New', Courier, monospace; /* Fuente tipo consola */
+    padding: 10px; /* Espaciado interno */
+    box-sizing: border-box; /* Para incluir padding en el tamaño total */
+  }
+  
+  /* Estilo del contenedor de mensajes */
+  .messages {
+    flex-grow: 1; /* Ocupa todo el espacio disponible */
+    overflow-y: auto; /* Permitir desplazamiento vertical si es necesario */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid lime; /* Borde verde */
+  }
+  
+  /* Estilo de cada mensaje */
+  .message {
+    margin: 5px 0; /* Margen entre mensajes */
+  }
+  
+  /* Estilo del contenedor de entrada de mensajes */
+  .input-container {
+    display: flex; /* Usar flexbox para alinear el input y el botón */
+  }
+  
+  /* Estilo del input de mensaje */
+  #messageInput {
+    flex-grow: 1; /* Ocupa todo el ancho disponible */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid lime; /* Borde verde */
+    background-color: black; /* Fondo negro */
+    color: lime; /* Color del texto */
+    font-family: 'Courier New', Courier, monospace; /* Fuente tipo consola */
+    outline: none; /* Sin contorno al seleccionar */
+  }
+  
+  /* Estilo del botón de enviar */
+  #sendButton {
+    padding: 10px 15px; /* Espaciado interno */
+    border: 1px solid lime; /* Borde verde */
+    background-color: black; /* Fondo negro */
+    color: lime; /* Color del texto */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    font-family: 'Courier New', Courier, monospace; /* Fuente tipo consola */
+    transition: background-color 0.3s; /* Transición suave para el hover */
+  }
+  
+  /* Efecto hover en el botón */
+  #sendButton:hover {
+    background-color: lime; /* Cambia el fondo a verde al pasar el mouse */
+    color: black; /* Cambia el texto a negro al pasar el mouse */
+  }
