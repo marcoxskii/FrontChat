@@ -2,8 +2,8 @@
 .chat-container {
     display: flex;
     flex-direction: column;
-    height: 100vh; /* Ocupa el 100% de la altura de la ventana */
-    background-color: black; /* Fondo negro */
+    height: 90vh; /* Ocupa el 100% de la altura de la ventana */
+    background-color: #23252E; /* Fondo negro */
     color: lime; /* Color del texto */
     font-family: 'Courier New', Courier, monospace; /* Fuente tipo consola */
     padding: 10px; /* Espaciado interno */
@@ -33,7 +33,7 @@
     flex-grow: 1; /* Ocupa todo el ancho disponible */
     padding: 10px; /* Espaciado interno */
     border: 1px solid lime; /* Borde verde */
-    background-color: black; /* Fondo negro */
+    background-color: #23252E; /* Fondo negro */
     color: lime; /* Color del texto */
     font-family: 'Courier New', Courier, monospace; /* Fuente tipo consola */
     outline: none; /* Sin contorno al seleccionar */
