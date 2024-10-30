@@ -1,6 +1,7 @@
 import { NgFor, DatePipe } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ChatService } from '../../Services/chat.service';
 
 @Component({
   selector: 'app-chat',
@@ -9,12 +10,19 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './chat.component.html',
   styleUrl: './chat.component.css'
 })
+
 export class ChatComponent {
   messages: { text: string, timestamp: Date }[] = [];
   userName: string = '';
   hasEnteredName: boolean = false;
+  message: string = '';
+
+  constructor(private chatService: ChatService){
+
+  }
 
   sendMessage() {
+    this.chatService
     const inputElement = document.getElementById('messageInput') as HTMLInputElement;
     const message = inputElement.value;
     if (!this.hasEnteredName) {
