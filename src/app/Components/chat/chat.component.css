@@ -1,57 +1,83 @@
-/* Estilo general del contenedor del chat */
+
 .chat-container {
     display: flex;
     flex-direction: column;
-    height: 90vh; /* Ocupa el 100% de la altura de la ventana */
-    background-color: #23252E; /* Fondo negro */
-    color: lime; /* Color del texto */
-    font-family: 'Courier New', Courier, monospace; /* Fuente tipo consola */
-    padding: 10px; /* Espaciado interno */
-    box-sizing: border-box; /* Para incluir padding en el tamaño total */
+    height: 90vh; 
+    background-color: #0f0f11;
+    color: rgb(254, 254, 254); 
+    font-family: 'Courier New', Courier, monospace; 
+    padding: 10px; 
+    box-sizing: border-box; 
+  }
+
+  .overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    animation: fadeIn 0.5s forwards;
   }
   
-  /* Estilo del contenedor de mensajes */
   .messages {
-    flex-grow: 1; /* Ocupa todo el espacio disponible */
-    overflow-y: auto; /* Permitir desplazamiento vertical si es necesario */
-    padding: 10px; /* Espaciado interno */
-    border: 1px solid lime; /* Borde verde */
+    flex-grow: 1; 
+    overflow-y: auto; 
+    padding: 10px; 
+    border: 1px solid lime; 
   }
   
-  /* Estilo de cada mensaje */
   .message {
-    margin: 5px 0; /* Margen entre mensajes */
+    margin: 5px 0;
   }
   
-  /* Estilo del contenedor de entrada de mensajes */
   .input-container {
-    display: flex; /* Usar flexbox para alinear el input y el botón */
+    display: flex;
+    z-index: 2;
   }
   
-  /* Estilo del input de mensaje */
   #messageInput {
-    flex-grow: 1; /* Ocupa todo el ancho disponible */
-    padding: 10px; /* Espaciado interno */
-    border: 1px solid lime; /* Borde verde */
-    background-color: #23252E; /* Fondo negro */
-    color: lime; /* Color del texto */
-    font-family: 'Courier New', Courier, monospace; /* Fuente tipo consola */
-    outline: none; /* Sin contorno al seleccionar */
+    flex-grow: 1; 
+    padding: 10px; 
+    border: 1px solid lime; 
+    background-color: #0f0f11;
+    color: rgb(255, 255, 255); 
+    font-family: 'Courier New', Courier, monospace; 
+    outline: none; 
+  }
+
+  .timestamp {
+    display: none;
+    font-size: 0.8em; 
+    color: rgb(179, 179, 179); 
+  }
+
+  .message:hover .timestamp {
+    display: inline-block;
   }
   
-  /* Estilo del botón de enviar */
   #sendButton {
-    padding: 10px 15px; /* Espaciado interno */
-    border: 1px solid lime; /* Borde verde */
-    background-color: black; /* Fondo negro */
-    color: lime; /* Color del texto */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-    font-family: 'Courier New', Courier, monospace; /* Fuente tipo consola */
-    transition: background-color 0.3s; /* Transición suave para el hover */
+    padding: 10px 15px; 
+    border: 1px solid lime; 
+    background-color: #0f0f11;
+    color: lime; 
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace; 
+    transition: background-color 0.3s; 
   }
   
-  /* Efecto hover en el botón */
   #sendButton:hover {
-    background-color: lime; /* Cambia el fondo a verde al pasar el mouse */
-    color: black; /* Cambia el texto a negro al pasar el mouse */
+    background-color: lime; 
+    color: rgb(74, 74, 74); 
   }
+
+  @keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
