@@ -20,3 +20,6 @@ Este es el frontend de la aplicación ByteChat, un chat en tiempo real con un di
    ```sh
    git clone https://github.com/TuUser/bytechat.git
    cd bytechat-frontend
+
+
+mkt & addriank12 ®
